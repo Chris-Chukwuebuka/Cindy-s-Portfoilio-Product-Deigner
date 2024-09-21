@@ -3,7 +3,7 @@ export default function AppHeader() {
 <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
         <a class="navbar-brand bg-black img-fluid" href="#home">
-            <img src={ require('../assets/images/cindys-logo.png')} alt="logo" width={"26px"} height={"46px"} />
+            <img src={ require('../assets/images/cindys-logo.png')} alt="logo" width={"26px"} height={"26px"} />
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
