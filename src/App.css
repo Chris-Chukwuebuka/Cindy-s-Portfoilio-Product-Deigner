@@ -30,6 +30,18 @@ img {
 .navbar .navbar-nav > li {
   padding: 0 10px;
 }
+.navbar-brand {
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+}
+
+.navbar-brand img {
+  width: 100%;
+  background-color: #9cc2c1 !important;
+
+}
 
 .navbar .navbar-nav > li > .nav-link {
   padding: 0 5px;

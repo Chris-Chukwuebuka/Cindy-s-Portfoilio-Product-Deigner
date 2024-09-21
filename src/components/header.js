@@ -1,35 +1,50 @@
-export default function AppHeader() {
-    return (
-<nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-        <a class="navbar-brand bg-black img-fluid" href="#home">
-            <img src={ require('../assets/images/cindys-logo.png')} alt="logo" width={"26px"} height={"26px"} />
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mx-auto">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#home">HOME</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#experience">EXPERIENCE</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#skills">SKILLS</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#portfolio">PORTFOLIO</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">CONTACT</a>
-                </li>
-            </ul>
-            <a class="btn-main contact btn-main-theme" data-scroll-nav="4" href="#contact">Contact now</a>
-        </div>
-    </div>
-</nav>
+import { useEffect } from 'react';
 
-    )
+export default function AppHeader() {
+    useEffect(() => {
+        const handleScroll = () => {
+            const navbarCollapse = document.getElementById('navbarSupportedContent');
+            if (navbarCollapse.classList.contains('show')) {
+                navbarCollapse.classList.remove('show');
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    return (
+        <nav className="navbar fixed-top navbar-expand-lg bg-body-tertiary">
+            <div className="container-fluid">
+                <a className="navbar-brand  img-fluid   " href="#home">
+                    <img src={require('../assets/images/cindys-logo.png')} alt="logo" className="logo img-fluid " width={"16px"} height={"16px"} />
+                </a>
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+                <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul className="navbar-nav mx-auto">
+                        <li className="nav-item">
+                            <a className="nav-link active" aria-current="page" href="#home">HOME</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" href="#experience">EXPERIENCE</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" href="#skills">SKILLS</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" href="#portfolio">PORTFOLIO</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" href="#contact">CONTACT</a>
+                        </li>
+                    </ul>
+                    <a className="btn-main contact btn-main-theme" data-scroll-nav="4" href="#contact">Contact now</a>
+                </div>
+            </div>
+        </nav>
+    );
 }
