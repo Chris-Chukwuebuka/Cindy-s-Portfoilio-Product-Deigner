@@ -21,16 +21,16 @@ export default function AppFooter() {
                     </li>
                     <li>
                         <div class="icon bg-2">
-                            <a href="mailto:dbeetge6@gmail.com"><i class="bi bi-envelope-fill"></i></a>
+                            <a href="mailto:ebubecynthiaobidiwe@gmail.com"><i class="bi bi-envelope-fill"></i></a>
                         </div>
                         <div class="col">
                             <h5>Mail</h5>
-                            <p>dbeetge6@gmail.com</p>
+                            <p>ebubecynthiaobidiwe@gmail.com</p>
                         </div>
                     </li>
                     <li>
                         <div class="icon bg-4">
-                          <a href="https://www.linkedin.com/in/danielle-beetge-797305ba/?originalSubdomain=za" target="_blank" rel="noreferrer"><i class="bi bi-linkedin"></i></a>
+                          <a href="https://www.linkedin.com/in/ebube-cynthia-17b223292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noreferrer"><i class="bi bi-linkedin"></i></a>
                         </div>
                         <div class="col">
                             <h5>See More</h5>
